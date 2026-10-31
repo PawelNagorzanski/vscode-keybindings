@@ -1,0 +1,121 @@
+[
+    // TERMINAL I PRZEŁĄCZANIE FOKUSU
+    // Pokazuje lub ukrywa dolny panel zintegrowanego terminala
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    // Przenosi fokus z edytora kodu do wnętrza terminala
+    {
+        "key": "alt+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    // Przenosi kursor z wnętrza terminala z powrotem do aktywnego pliku
+    {
+        "key": "alt+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+
+    // NAWIGACJA PO KODZIE I PLIKACH
+    // Otwiera menu szybkiego wyszukiwania plików po nazwie
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
+    },
+    // Otwiera Paletę Poleceń z dostępem do wszystkich funkcji edytora
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.showCommands"
+    },
+    // Przeszukuje symbole, klasy i metody w całym projekcie
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.showAllSymbols"
+    },
+    // Wyszukuje metody, funkcje i pola wewnątrz bieżącego pliku
+    {
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.gotoSymbol"
+    },
+    // Skacze bezpośrednio do definicji lub deklaracji elementu pod kursorem
+    {
+        "key": "f12",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    // Wyświetla okno ze wszystkimi wywołaniami danej metody w projekcie
+    {
+        "key": "shift+f12",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    // Szybki podgląd definicji w małym oknie bez opuszczania bieżącej linii
+    {
+        "key": "alt+f12",
+        "command": "editor.action.peekDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    // Powrót do poprzedniego miejsca w historii nawigacji
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    // Przejście do następnego miejsca w historii nawigacji
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward"
+    },
+
+    // REFAKTORYZACJA I EDYCJA KODU
+    // Wywołuje menu refaktoryzacji, na przykład wyodrębnienie metody lub zmiennej
+    {
+        "key": "ctrl+shift+r",
+        "command": "editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    // Zmienia nazwę zmiennej lub metody w całym projekcie ze zachowaniem spójności
+    {
+        "key": "f2",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    // Komentuje lub odkomentowuje zaznaczony blok tekstu
+    {
+        "key": "ctrl+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // Zaznacza kolejne identyczne wystąpienie wyrazu pod kursorem dla multikursora
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    // Przesuwa bieżącą linię lub zaznaczenie w górę
+    {
+        "key": "alt+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // Przesuwa bieżącą linię lub zaznaczenie w dół
+    {
+        "key": "alt+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // Duplikuje bieżącą linię w dół
+    {
+        "key": "shift+alt+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // ZARZĄDZANIE OKNAMI I WIDOKIEM
+    // Pokazuje lub ukrywa boczny pasek z drzewem plików
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    }
+]
