@@ -118,4 +118,5 @@
         "key": "ctrl+b",
         "command": "workbench.action.toggleSidebarVisibility"
     }
+    // Ctrl + PageDown / PageUp – przejście do następnej / poprzedniej karty.
 ]
